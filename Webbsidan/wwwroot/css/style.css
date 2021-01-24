@@ -62,7 +62,7 @@
         color: #fff;
         overflow: auto;
         width: 100%;
-        margin-top: 500px;
+        margin-top: 300px;
     }
 }
 
@@ -108,10 +108,11 @@
     footer {
         background-color: #800040;
         padding: 16px 31px;
-        margin-top: 500px;
+        margin-top: 30%;
         text-align: center;
         color: #fff;
         overflow: auto;
         width: 100%;
+        margin-top: 500px;
     }
 }
