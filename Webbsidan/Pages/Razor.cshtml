@@ -1,0 +1,38 @@
+﻿@page
+@model Webbsidan.Pages.RazorModel
+@{
+    ViewData["Title"] = "Razor";
+
+    var datum = DateTime.Now;
+}
+<!-- En undersida designad för att hantera Razor-pages kommandon och liknande skapas här och inkluderas i webbsidan -->
+
+<h1>Razor innehåll</h1>
+
+<p> Datum/Klockslag: @datum</p>
+
+@if (datum.DayOfWeek == DayOfWeek.Monday)
+{
+    <p>Idag är det måndag, Yippie!</p>
+}
+else
+{
+    <p>Idag är det inte måndag!</p>
+}
+<br />
+<p>Lista på alla kurser som vi har eller snart kommer att läsa: </p>
+
+@{string[] arr = {"DT003G Databaser", "DT057G Webbutveckling I", "DT068G Webbanvändbarhet", "DT071G Programmering I C#.net",
+                      "DT084G Introduktion till programmering i JavaScript", "DT093G Webbutveckling II", "DT102G ASP.net med C#", "DT140G Självständigt arbete",
+                      "DT152G 	Webbdesign för CMS", "DT162G JavaScript-baserad webbutveckling", "DT163G Digital bildbehandling för webb", "DT173G Webbutveckling III",
+                      "GD008G Typografi och form för webb", "IG021G Affärsplaner och kommersialisering", "IK060G Projektledning" };
+
+}
+@for (int i = 0; i < arr.Length; i++)
+{
+    <ul>
+        <li>@arr[i]</li>
+    </ul>
+}
+
+

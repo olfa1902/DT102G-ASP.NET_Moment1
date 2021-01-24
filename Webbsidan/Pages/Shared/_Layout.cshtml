@@ -1,0 +1,35 @@
+﻿<!-- Layout-sidan skapas och används som en mall för alla undersidor och hämtar lite information från Razorpages-->
+<!DOCTYPE html>
+<html lang= "sv">
+<head>
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/style.css" />
+    <link rel="shortcut icon" href="~/logo/logga.png" />
+    <link rel="icon" href="~/logo/logga.png" />
+</head>
+<body>
+    <a href="/"><img src="~/logo/logga.png" alt="Logga för ett fiktivt företag" id="logotyp" class="top" /></a>
+    @{var aktuelltdatum = DateTime.Now.ToString("yyyy-MM-dd"); }
+    <p id="dagensdatum" class="top">Dagens datum är: @aktuelltdatum </p>
+
+    <div class="content">
+        <nav id="navigation">
+            <ul>
+                <li><a href="/">Startsidan</a></li>
+                <li><a href="/Razor">Razor-innehåll</a></li>
+                <li><a href="/Om">Om</a></li>
+            </ul>
+        </nav>
+        <main>
+            @RenderBody()
+        </main>
+    </div>
+    <footer>
+        <p>© Copyright 2020 | Examplecompany.com | Adressvägen 1, 234 56 Postkontoret | Telefon 012 34 56 78 | Kontakta mig på epost: olfa1902@student.miun.se </p>
+
+        <p id="jsparagraf"></p>
+    </footer>
+
+    <script src="~/js/main.js"></script>
+</body>
+</html>

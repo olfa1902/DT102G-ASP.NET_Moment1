@@ -1,0 +1,117 @@
+﻿/*Dagens datum sätts ut i översta högra hörnet tillsammans med viss design för navigationsmenyn som påverkar båda versioner av hemsidan*/
+
+#dagensdatum {
+    width: 150px;
+    float: right;
+    margin-right: 15%;
+}
+
+#navigation ul{
+    list-style: none;
+}
+
+#navigation ul li{
+    display: block;
+    text-decoration: none;
+    font-size: 1.25em;
+}
+
+/*En media query för mindre skärmar skapas och ser till att loggan, navigationsmenyn, textstorlek och annat blir mindre för att göra sidan responsiv*/
+@media screen and (max-width: 949px){
+    body {
+        font-size: 1em;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        width: 90%;
+    }
+
+    #logotyp {
+        width: 120px;
+        margin-left: 10%;
+    }
+
+    #navigation {
+        padding-left: 5%;
+        float: left;
+        width: 29%;
+    }
+
+    main {
+        padding-left: 15%;
+        float: left;
+        width: 50%;
+    }
+
+    #navigation ul li a {
+        background-color: #800040;
+        width: 90px;
+        border: none;
+        color: white;
+        padding: 15px 15px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+
+    footer {
+        background-color: #800040;
+        padding: 1% 4%;
+        text-align: center;
+        color: #fff;
+        overflow: auto;
+        width: 100%;
+        margin-top: 500px;
+    }
+}
+
+/*En media query för datorer och större enheter skapas, där menyn, loggan, textxtorlek med mera blir större och tydligare då vi större storlekar kan fokusera på detta utan bekymmer för att sidan ser ihoptryckt ut*/
+@media screen and (min-width: 949px){
+    #logotyp {
+        width: 170px;
+        margin-left: 12%;
+    }
+
+    body {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 1.125em;
+        width: 90%;
+    }
+
+    #navigation {
+        padding-left: 10%;
+        float: left;
+        width: 29%;
+    }
+
+    main {
+        padding-left: 5%;
+        float: left;
+        width: 50%;
+    }
+
+    #navigation ul li a {
+        background-color: #800040;
+        width: 190px;
+        border: none;
+        color: white;
+        padding: 15px 15px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+
+    footer {
+        background-color: #800040;
+        padding: 16px 31px;
+        margin-top: 500px;
+        text-align: center;
+        color: #fff;
+        overflow: auto;
+        width: 100%;
+    }
+}
